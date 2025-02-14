@@ -1,6 +1,6 @@
 
 
-  CREATE TABLE raw.gl (
+   CREATE TABLE raw.gl (
     EntryNo DECIMAL(10,1) ,  -- Ensuring only one decimal place
     Date DATE NOT NULL,                 -- Convert from integer to date format
     Territory_key INT NOT NULL,         -- Foreign key reference to Territories
@@ -13,7 +13,7 @@
 INSERT INTO raw.gl (EntryNo, Date, Territory_key, Account_key, Details, Amount)
 SELECT 
     ROUND(EntryNo, 1) AS EntryNo,        -- Ensuring one decimal place
-    DATEADD(DAY, Date - 43000, '2000-01-01') AS Date,  -- Convert integer date
+    CAST(DATEADD(DAY, Date, '1899-12-30') AS DATE) AS Date,  -- Convert integer date
     Territory_key, 
     Account_key, 
     Details, 
