@@ -1,6 +1,6 @@
 
 --------
-CREATE TABLE raw.cash_flow (
+CREATE TABLE staging.cash_flow (
     Type VARCHAR(100) NOT NULL,        -- Example: "Cash flows from Operating Activities"
     Subtype VARCHAR(100) NOT NULL,     -- Example: "Profit before tax"
     Rank INT NOT NULL,                 -- Example: 1, 2 (Ensuring proper numerical ranking)
@@ -20,5 +20,5 @@ SELECT
     SubAccount, 
     ValueType, 
     Account_Key
-FROM staging.cash_flow;
+FROM raw.cash_flow;
 

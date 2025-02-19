@@ -1,7 +1,7 @@
-INSERT INTO raw.soce (Type, Account, Balancetype, Account_key)
+INSERT INTO staging.soce (Type, Account, Balancetype, Account_key)
 SELECT DISTINCT 
     Type, 
     Account, 
     Balancetype, 
     Account_key
-FROM staging.soce;
+FROM raw.soce;

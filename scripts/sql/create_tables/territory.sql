@@ -1,6 +1,6 @@
-INSERT INTO raw.territory (Territory_key, Country, Region)
+INSERT INTO staging.territory (Territory_key, Country, Region)
 SELECT 
     Territory_key, 
     Country, 
     Region
-FROM staging.territory;
+FROM raw.territory;

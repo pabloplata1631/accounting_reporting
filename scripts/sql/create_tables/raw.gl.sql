@@ -1,6 +1,6 @@
 
 
-   CREATE TABLE raw.gl (
+   CREATE TABLE staging.gl (
     EntryNo DECIMAL(10,1) ,  -- Ensuring only one decimal place
     Date DATE NOT NULL,                 -- Convert from integer to date format
     Territory_key INT NOT NULL,         -- Foreign key reference to Territories
@@ -18,4 +18,4 @@ SELECT
     Account_key, 
     Details, 
     CAST(Amount AS DECIMAL(18,2)) AS Amount -- Ensuring two decimal places
-FROM staging.gl;
+FROM raw.gl;

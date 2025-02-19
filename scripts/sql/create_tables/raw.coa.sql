@@ -1,4 +1,4 @@
-CREATE TABLE raw.coa (
+CREATE TABLE staging.coa (
     Account_Key INT PRIMARY KEY,       -- Unique account identifier
     Report VARCHAR(50) NOT NULL,       -- Example: "Balance Sheet"
     Class VARCHAR(50) NOT NULL,        -- Example: "Assets"
@@ -18,4 +18,4 @@ SELECT
     SubClass2, 
     Account, 
     SubAccount
-FROM staging.coa;
+FROM raw.coa;

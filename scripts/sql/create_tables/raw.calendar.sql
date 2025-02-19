@@ -1,4 +1,4 @@
-CREATE TABLE raw.calendar (
+CREATE TABLE staging.calendar (
     Date DATE NOT NULL,      -- Converted from serial number
     Year INT NOT NULL,               -- Extracted from Column1
     Quarter VARCHAR(10) NOT NULL,    -- Example: 'Qtr 1'
@@ -14,5 +14,5 @@ SELECT
     Quarter,                      -- Keep as-is
     Month,                        -- Keep as-is
     Day                           -- Keep as-is
-FROM staging.calendar;
+FROM raw.calendar;
 
